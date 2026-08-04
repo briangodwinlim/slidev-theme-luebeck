@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build & export output
+dist/
+.slidev/
+slides-export/
+slides-export.pdf
+
+# Editor & OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs & env
+*.log
+.env
+.env.*
+
+# Test / scratch
+test-cite.mjs

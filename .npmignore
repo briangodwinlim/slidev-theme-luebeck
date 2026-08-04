@@ -1,0 +1,29 @@
+# Demo deck (git only)
+slides.md
+references.bib
+
+# Build & export output
+dist/
+.slidev/
+slides-export/
+slides-export.pdf
+
+# Dev & tooling
+node_modules/
+test-cite.mjs
+package-lock.json
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.*
+
+# Git metadata (not needed in tarball)
+.git/
+.gitignore
+.gitattributes

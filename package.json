@@ -1,0 +1,62 @@
+{
+  "name": "slidev-theme-luebeck",
+  "version": "1.0.0",
+  "description": "A Slidev theme inspired by the Beamer Luebeck theme",
+  "type": "module",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "author": "Brian Godwin Lim",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briangodwinlim/slidev-theme-luebeck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/briangodwinlim/slidev-theme-luebeck/issues"
+  },
+  "homepage": "https://github.com/briangodwinlim/slidev-theme-luebeck#readme",
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md",
+    "screenshot": "slidev export slides.md --format png"
+  },
+  "files": [
+    "components",
+    "layouts",
+    "setup",
+    "styles",
+    "global-bottom.vue",
+    "vite.config.ts",
+    "README.md",
+    "LICENSE",
+    "components/slidev.d.ts"
+  ],
+  "dependencies": {
+    "@jxpeng98/markdown-it-citation": "^1.2.1",
+    "@slidev/types": "^52.18.0"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.18.0",
+    "playwright-chromium": "^1.62.1"
+  },
+  "engines": {
+    "node": ">=20.12.0",
+    "slidev": ">=0.48.0"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "highlighter": "shiki",
+    "defaults": {
+      "aspectRatio": "16/9",
+      "fonts": {
+        "sans": "Lato",
+        "custom": "Roboto Slab",
+        "provider": "google",
+        "weights": "400,700"
+      }
+    }
+  }
+}

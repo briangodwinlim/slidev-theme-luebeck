@@ -1,0 +1,208 @@
+.slidev-layout {
+  background-color: var(--luebeck-bg);
+  color: var(--luebeck-text);
+  font-family: 'Lato', sans-serif;
+  counter-reset: figure;
+}
+
+.slidev-layout h1:not(.luebeck-cover-title) {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.slidev-layout h2 {
+  font-size: 1.35rem !important;
+  font-weight: 400;
+  margin-top: 0.4rem;
+  margin-bottom: 0.1rem;
+}
+
+.slidev-layout h3 {
+  font-size: 1.25rem !important;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+
+.slidev-layout h4 {
+  font-size: 1.15rem !important;
+  font-weight: 400;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
+}
+
+.slidev-layout h5,
+.slidev-layout h6 {
+  margin-top: 0.15rem;
+  margin-bottom: 0.05rem;
+}
+
+.slidev-layout :is(h2, h3, h4, h5, h6) + * {
+  margin-top: 0.25rem !important;
+}
+
+.slidev-layout.cover h1.luebeck-cover-title,
+.slidev-layout.cover h2.luebeck-cover-subtitle {
+  font-family: 'Roboto Slab', ui-serif, Georgia, serif !important;
+  font-weight: 400;
+}
+
+.slidev-layout.default h1,
+.slidev-layout.bibliography h1 {
+  background-color: var(--luebeck-primary);
+  color: white !important;
+  margin-top: -0.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0.2rem 1rem;
+  width: calc(100% + 2rem);
+  font-size: 1.7rem !important;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+.slidev-layout.default h1 + *,
+.slidev-layout.bibliography h1 + * {
+  margin-top: 1.5rem;
+}
+
+.slidev-layout ul,
+.slidev-layout ol {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  padding-left: 1.5rem;
+}
+
+.slidev-layout :is(ul, ol) li::marker {
+  color: var(--luebeck-primary);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.slidev-layout ul {
+  list-style-type: disc;
+}
+
+.slidev-layout ol {
+  list-style-type: decimal;
+}
+
+.slidev-layout li {
+  line-height: 1.35;
+  margin-left: 0.4em;
+  padding-left: 0.1em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.slidev-layout figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.slidev-layout figcaption::before {
+  counter-increment: figure;
+  content: "Fig. " counter(figure) ": ";
+  font-weight: bold;
+  color: var(--luebeck-primary);
+}
+
+.slidev-layout figcaption.no-figure-number::before {
+  content: none;
+  counter-increment: none;
+}
+
+/* --- Citations & bibliography --- */
+.slidev-layout .citation-link {
+  color: var(--luebeck-primary);
+  text-decoration: none;
+}
+
+.slidev-layout .citation-link:hover {
+  text-decoration: underline;
+}
+
+.slidev-layout .citation-error {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* Bibliography entries (markdown-it-citation output) */
+.slidev-layout.bibliography .bibliography {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.slidev-layout.bibliography .bibliography-title {
+  display: none;
+}
+
+.slidev-layout.bibliography .csl-bib-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.slidev-layout.bibliography .csl-entry {
+  font-size: 0.85rem;
+  padding-left: 1.5rem;
+  text-indent: -0.75rem;
+  margin-bottom: 0.25em;
+}
+
+.slidev-layout.bibliography .bibliography-numbered .csl-entry {
+  padding-left: 2rem;
+}
+
+.slidev-layout.bibliography .csl-entry a {
+  color: var(--luebeck-primary);
+  text-decoration: none;
+}
+
+.slidev-layout.bibliography .csl-entry a:hover {
+  text-decoration: underline;
+}
+
+/* --- Tables --- */
+.slidev-layout table {
+  width: auto;
+  max-width: 100%;
+  margin: 0.35rem auto 0.5rem;
+  border-collapse: collapse;
+  line-height: 1.25;
+  border-top: 2px solid var(--luebeck-text);
+  border-bottom: 2px solid var(--luebeck-text);
+}
+
+.slidev-layout thead {
+  border-bottom: 1px solid var(--luebeck-text);
+}
+
+.slidev-layout tr {
+  border-bottom: none !important;
+}
+
+.slidev-layout th,
+.slidev-layout td {
+  padding: 0.15rem 1rem !important;
+  vertical-align: baseline;
+}
+
+.slidev-layout th {
+  font-weight: 600;
+}
+
+.slidev-layout table.table-wide {
+  width: 100%;
+}
+
+.slidev-layout.contact a.contact-slide__label,
+.slidev-layout.contact a.contact-slide__label:hover {
+  border: none !important;
+  text-decoration: none !important;
+}

@@ -1,0 +1,12 @@
+:root {
+  --beamer-blendedblue: #0047ab;
+  --slidev-theme-primary: var(--beamer-blendedblue);
+  --luebeck-primary: var(--beamer-blendedblue);
+  --luebeck-secondary: color-mix(in srgb, var(--beamer-blendedblue) 75%, black);
+  --luebeck-tertiary: color-mix(in srgb, var(--beamer-blendedblue) 50%, black);
+  --luebeck-block-bg: color-mix(in srgb, var(--beamer-blendedblue) 10%, white);
+  --luebeck-block-alert-bg: color-mix(in srgb, #b91c1c 10%, white);
+  --luebeck-block-example-bg: color-mix(in srgb, #15803d 10%, white);
+  --luebeck-bg: #ffffff;
+  --luebeck-text: #000000;
+}
