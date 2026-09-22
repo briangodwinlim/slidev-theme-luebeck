@@ -2,6 +2,9 @@ declare module '@slidev/types' {
   interface SlidevConfig {
     subtitle?: string
     title_short?: string
+    author_short?: string
+    /** Cover author line: full (default), short (author_short only), or both */
+    coverAuthors?: 'full' | 'short' | 'both'
     institute?: string
     institute_short?: string
     date?: string

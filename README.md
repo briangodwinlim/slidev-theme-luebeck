@@ -59,12 +59,12 @@ subsection: Data Collection
 
 ## Layouts
 
-| Layout | Description |
-|--------|-------------|
-| `cover` | Title slide with blue band |
-| `default` | Content slide with full-width blue `# Title` bar |
-| `notitle` | Content without styled title bar |
-| `bibliography` | References slide with Beamer-style list |
+| Layout         | Description                                      |
+|----------------|--------------------------------------------------|
+| `cover`        | Title slide with blue band                       |
+| `default`      | Content slide with full-width blue `# Title` bar |
+| `notitle`      | Content without styled title bar                 |
+| `bibliography` | References slide with Beamer-style list          |
 
 ## Citations & bibliography
 
@@ -86,13 +86,13 @@ citationStyle: apa               # default: apa (author–year)
 
 ### 2. Inline citations
 
-| Syntax | Result |
-|--------|--------|
-| `@citekey` | Parenthetical, e.g. (Knuth, 1984) with APA |
-| `!@citekey` | Narrative, e.g. Knuth (1984) |
-| `[@citekey]` | Pandoc-style (normalized to `@citekey`) |
-| `\cite{key}` | LaTeX-style (normalized to `@key`) |
-| `\citet{key}` | LaTeX narrative (normalized to `!@key`) |
+| Syntax        | Result                                     |
+|---------------|--------------------------------------------|
+| `@citekey`    | Parenthetical, e.g. (Knuth, 1984) with APA |
+| `!@citekey`   | Narrative, e.g. Knuth (1984)               |
+| `[@citekey]`  | Pandoc-style (normalized to `@citekey`)    |
+| `\cite{key}`  | LaTeX-style (normalized to `@key`)         |
+| `\citet{key}` | LaTeX narrative (normalized to `!@key`)    |
 
 Example:
 
@@ -127,14 +127,14 @@ Only entries cited in the deck (or listed under `citations:` / `references:` / `
 
 Set `citationStyle` (or `bibStyle`) to any [CSL template](https://github.com/citation-style-language/styles) supported by citation-js, for example:
 
-| `citationStyle` | Beamer analogue |
-|-----------------|-----------------|
-| `apa` | Author–year (natbib `authoryear`) — **default** |
-| `harvard1` | Author–year (Harvard) |
-| `ieee` | Numeric / IEEE |
-| `vancouver` | Numeric / Vancouver |
-| `mla` | Humanities |
-| `chicago-author-date` | Chicago author–date |
+| citationStyle         | Beamer analogue                                 |
+|-----------------------|-------------------------------------------------|
+| `apa`                 | Author–year (natbib `authoryear`) — **default** |
+| `harvard1`            | Author–year (Harvard)                           |
+| `ieee`                | Numeric / IEEE                                  |
+| `vancouver`           | Numeric / Vancouver                             |
+| `mla`                 | Humanities                                      |
+| `chicago-author-date` | Chicago author–date                             |
 
 For fully numeric inline citations and numbered bibliography entries, use e.g. `citationStyle: ieee` with `showNum: true`.
 
@@ -148,18 +148,20 @@ For fully numeric inline citations and numbered bibliography entries, use e.g. `
 
 ## Frontmatter
 
-| Field | Scope | Description |
-|-------|-------|-------------|
-| `title_short` | deck | Short title in footer (falls back to `title`) |
-| `institute_short` | deck | Short institute in footer |
-| `institute` | deck | Full institute on cover slide |
-| `date_short` | deck | Short date in footer (falls back to `date`) |
-| `section` | slide | Section label (left header bar) |
-| `subsection` | slide | Subsection label (right header bar) |
-| `bibliography` / `bibFile` | deck | Path to BibTeX file (default `references.bib`) |
-| `citationStyle` / `bibStyle` | deck | CSL citation style (default `apa`) |
-| `showNum` | deck | Numbered bibliography entries (default `false`; set `true` with `ieee`/`vancouver`) |
-| `bibTitle` | deck | Optional bibliography heading (layout `# Title` is preferred) |
+| Field                        | Scope | Description                                                                          |
+|------------------------------|-------|--------------------------------------------------------------------------------------|
+| `title_short`                | deck  | Short title in footer (falls back to `title`)                                        |
+| `author_short`               | deck  | Short author line in footer (HTML allowed); optional on cover via `coverAuthors`     |
+| `coverAuthors`               | deck  | `full` (default), `short`, or `both` — which author fields appear on the cover slide |
+| `institute_short`            | deck  | Short institute in footer                                                            |
+| `institute`                  | deck  | Full institute on cover slide                                                        |
+| `date_short`                 | deck  | Short date in footer (falls back to `date`)                                          |
+| `section`                    | slide | Section label (left header bar)                                                      |
+| `subsection`                 | slide | Subsection label (right header bar)                                                  |
+| `bibliography` / `bibFile`   | deck  | Path to BibTeX file (default `references.bib`)                                       |
+| `citationStyle` / `bibStyle` | deck  | CSL citation style (default `apa`)                                                   |
+| `showNum`                    | deck  | Numbered bibliography entries (default `false`; set `true` with `ieee`/`vancouver`)  |
+| `bibTitle`                   | deck  | Optional bibliography heading (layout `# Title` is preferred)                        |
 
 ## Project structure
 
@@ -185,11 +187,11 @@ slides.md              Demo / preview deck (git only)
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Preview demo deck |
-| `npm run build` | Build static site from demo deck |
-| `npm run export` | Export demo deck to PDF |
+| Command              | Description                                            |
+|----------------------|--------------------------------------------------------|
+| `npm run dev`        | Preview demo deck                                      |
+| `npm run build`      | Build static site from demo deck                       |
+| `npm run export`     | Export demo deck to PDF                                |
 | `npm run screenshot` | Export demo deck to PNG (`slides-export/`, gitignored) |
 
 ## KaTeX
